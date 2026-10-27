@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Advanced HTML tags and form controls">
+    <title>HTML Practice - Day 04</title>
+</head>
+<body>
+    <header>
+        <h1>Advanced HTML Practice</h1>
+        <p>Internship Training Program - Day 04</p>
+        <p>This page demonstrates different HTML input types, validation attributes, and other useful elements.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Intern Registration Form</h2>
+            <p>Fill in the details below to practice HTML form controls.</p>
+
+            <form action="/submit-registration" method="post" enctype="multipart/form-data" autocomplete="on">
+                <input type="hidden" name="courseId" value="HTML-04">
+
+                <fieldset>
+                    <legend>Personal Information</legend>
+
+                    <p>
+                        <label for="fullName">Full Name:</label><br>
+                        <input type="text" id="fullName" name="fullName"
+                               placeholder="Enter your full name"
+                               minlength="3" maxlength="50"
+                               autocomplete="name" required>
+                    </p>
+
+                    <p>
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email"
+                               placeholder="example@gmail.com"
+                               autocomplete="email" required>
+                    </p>
+
+                    <p>
+                        <label for="phone">Phone Number:</label><br>
+                        <input type="tel" id="phone" name="phone"
+                               placeholder="03001234567"
+                               pattern="03[0-9]{9}"
+                               title="Enter an 11-digit Pakistani mobile number starting with 03"
+                               autocomplete="tel" required>
+                    </p>
+
+                    <p>
+                        <label for="registrationId">Registration ID:</label><br>
+                        <input type="text" id="registrationId"
+                               name="registrationId" value="INT-2026-04"
+                               readonly>
+                    </p>
+
+                    <p>
+                        <label for="department">Department:</label><br>
+                        <input type="text" id="department"
+                               name="department" value="Web Development"
+                               disabled>
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Training Details</legend>
+
+                    <p>
+                        <label for="interviewDate">Interview Date and Time:</label><br>
+                        <input type="datetime-local" id="interviewDate"
+                               name="interviewDate" required>
+                    </p>
+
+                    <p>
+                        <label for="experience">Experience in Months:</label><br>
+                        <input type="number" id="experience"
+                               name="experience" min="0" max="24"
+                               step="2" value="0">
+                    </p>
+
+                    <p>
+                        <label for="course">Select a Course:</label><br>
+                        <input list="courseList" id="course"
+                               name="course"
+                               placeholder="Choose or type a course">
+
+                        <datalist id="courseList">
+                            <option value="HTML">
+                            <option value="CSS">
+                            <option value="JavaScript">
+                            <option value="React">
+                            <option value="Python">
+                        </datalist>
+                    </p>
+
+                    <p>
+                        <label for="documents">Upload Documents:</label><br>
+                        <input type="file" id="documents" name="documents"
+                               accept=".pdf,.doc,.docx" multiple>
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Form Buttons</legend>
+
+                    <p>
+                        <input type="submit" value="Submit Registration">
+                        <input type="reset" value="Clear Form">
+                        <input type="button" value="Normal Button">
+                    </p>
+
+                    <p>Image Submit Button:</p>
+
+                    <input type="image"
+                           name="imageSubmit"
+                           src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='110' height='40'%3E%3Crect width='110' height='40' fill='%232e7d32'/%3E%3Ctext x='55' y='25' text-anchor='middle' font-size='16' fill='white'%3ESubmit%3C/text%3E%3C/svg%3E"
+                           alt="Submit Registration"
+                           width="110" height="40">
+                </fieldset>
+            </form>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Progress and Measurement</h2>
+
+            <p>
+                <label for="courseProgress">Course Completion:</label><br>
+                <progress id="courseProgress" value="60" max="100">60%</progress>
+            </p>
+
+            <p>
+                <label for="skillMeter">HTML Skill Level:</label><br>
+                <meter id="skillMeter" min="0" max="100"
+                       low="30" high="80" optimum="100"
+                       value="75">75 out of 100</meter>
+            </p>
+
+            <p>
+                <label for="result">Assessment Score:</label><br>
+                <output id="result" name="result">85 Marks</output>
+            </p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>HTML Text Formatting</h2>
+
+            <p>
+                <b>HTML</b> is used to create the structure of web pages.
+            </p>
+
+            <p>
+                <i>HyperText Markup Language</i> is the full form of HTML.
+            </p>
+
+            <p>
+                Previous Course Fee: <s>Rs. 5000</s><br>
+                Current Course Fee: Rs. 3000
+            </p>
+
+            <p>
+                The old starting date was
+                <del datetime="2026-10-20">October 20</del>
+                and the updated date is
+                <ins datetime="2026-10-25">October 25</ins>.
+            </p>
+
+            <p>
+                <u>Important:</u> Complete all the practice exercises.
+            </p>
+
+            <p>
+                Water Formula: H<sub>2</sub>O
+            </p>
+
+            <p>
+                Mathematical Expression: X<sup>2</sup> + Y<sup>2</sup>
+            </p>
+
+            <h3>Text Direction Examples</h3>
+
+            <p>
+                Student Name:
+                <bdi>علی احمد</bdi>
+            </p>
+
+            <p>
+                Reversed Text:
+                <bdo dir="rtl">Hello World</bdo>
+            </p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Image Map Example</h2>
+            <p>Click either side of the image to open a course section.</p>
+
+            <img
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='100'%3E%3Crect width='150' height='100' fill='%23e65100'/%3E%3Crect x='150' width='150' height='100' fill='%231565c0'/%3E%3Ctext x='75' y='55' text-anchor='middle' font-size='24' fill='white'%3EHTML%3C/text%3E%3Ctext x='225' y='55' text-anchor='middle' font-size='24' fill='white'%3ECSS%3C/text%3E%3C/svg%3E"
+                alt="HTML and CSS course navigation"
+                width="300" height="100"
+                usemap="#courseMap">
+
+            <map name="courseMap">
+                <area shape="rect" coords="0,0,149,99"
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+                      alt="HTML Documentation"
+                      target="_blank" rel="noopener noreferrer">
+
+                <area shape="rect" coords="150,0,299,99"
+                      href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+                      alt="CSS Documentation"
+                      target="_blank" rel="noopener noreferrer">
+            </map>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Canvas Example</h2>
+            <p>The canvas element creates a drawing area on a web page.</p>
+
+            <canvas id="drawingArea" width="300" height="150">
+                Your browser does not support the canvas element.
+            </canvas>
+
+            <p>
+                The canvas is empty because drawing usually requires JavaScript.
+            </p>
+        </section>
+
+        <section>
+            <h2>Template Example</h2>
+            <p>The template element stores markup that is not displayed immediately.</p>
+
+            <template id="courseTemplate">
+                <article>
+                    <h3>New HTML Lesson</h3>
+                    <p>This lesson is stored inside a template.</p>
+                </article>
+            </template>
+
+            <p>The template content remains hidden until it is used by a script.</p>
+        </section>
+
+        <section>
+            <h2>Noscript Example</h2>
+
+            <noscript>
+                <p>JavaScript is disabled or not supported in this browser.</p>
+            </noscript>
+
+            <p>This page uses only HTML and does not require JavaScript.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p><small>Bloomrix Internship - HTML Practice Task 04</small></p>
+    </footer>
+</body>
+</html>
